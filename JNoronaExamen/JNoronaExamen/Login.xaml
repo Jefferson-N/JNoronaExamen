@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JNoronaExamen.Login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Login"
+                   FontSize="16" Style="{StaticResource EstiloGlobal}"/>
+            <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"></Image>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="USUARIO" FontSize="16" Grid.Row="0" Grid.Column="0" Style="{StaticResource EstiloGlobal}"/>
+                <Label Text="CONTRASEÑA" FontSize="16" Grid.Row="1" Grid.Column="0" Style="{StaticResource EstiloGlobal}"/>
+                <Entry x:Name="txtUser" Placeholder="Usuario" Grid.Row="0" Grid.Column="1" Style="{StaticResource EstiloGlobal}"/>
+                <Entry x:Name="txtPass" Placeholder="Contraseña" Grid.Row="1" Grid.Column="1" IsPassword="True" Style="{StaticResource EstiloGlobal}"/>
+            </Grid>
+
+            <Button Text="Iniciar Sesion"  Clicked="session_Clicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

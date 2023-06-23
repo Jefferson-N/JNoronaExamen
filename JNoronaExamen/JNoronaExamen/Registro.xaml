@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JNoronaExamen.Registro">
+    <ContentPage.Resources>
+            <ResourceDictionary>
+                <Style x:Key="EstiloExplicito" TargetType="StackLayout">
+                <Setter Property="Padding" Value="5,20,5,5" />
+                <Setter Property="Margin" Value="8, 50, 8, 0" />
+                    
+                </Style>
+            </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout  Style="{StaticResource EstiloExplicito}">
+
+            <Label x:Name="lblUser"
+                   TextColor="Red"/>
+            
+            <Label Text="Registro" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Fecha" FontSize="16" Grid.Row="0" Grid.Column="0" />
+                <DatePicker x:Name="dpFecha" Date="2023-06-22" FontSize="16" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Pais" FontSize="16" Grid.Row="1" Grid.Column="0" />
+                <Picker x:Name="pkrPais" Title="Pais" Grid.Row="1" Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>Ecuador</x:String>
+                        <x:String>Panamà</x:String>
+                        <x:String>Colombia</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label Text="Ciudad" FontSize="16" Grid.Row="2" Grid.Column="0" />
+                <Picker x:Name="pkrCiudad" Title="Ciudad" Grid.Row="2" Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>Quito</x:String>
+                    </Picker.Items>
+                </Picker>                
+                <Label Text="Monto Inicial" FontSize="16" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="txtMonto" Placeholder="Monto" Keyboard="Numeric" Grid.Row="3" Grid.Column="1"/>
+                <Label Text="Pago Mensual" FontSize="16" Grid.Row="4" Grid.Column="0"/>
+                <Entry x:Name="txtPagoM" Placeholder="Pago" Grid.Row="4" Grid.Column="1" IsEnabled="False"/>
+            </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nombre" FontSize="16" Grid.Row="0" Grid.Column="0" />
+                <Label Text="Apellido" FontSize="16" Grid.Row="0" Grid.Column="1" />
+                <Label Text="Edad" FontSize="16" Grid.Row="0" Grid.Column="2" />
+
+
+                <Entry x:Name="txtNombre" Placeholder="Nombre"  Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtApellido" Placeholder="Apellido" Grid.Row="1" Grid.Column="1"/>
+                <Entry x:Name="txtEdad" Placeholder="Edad" Keyboard="Numeric" Grid.Row="1" Grid.Column="2"/>
+            </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnPago" Text="Calcular P. Mensual" Clicked="btnPago_Clicked" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="btnResumen" Text="Resumen" Clicked="btnResumen_Clicked" Grid.Row="0" Grid.Column="1" />
+
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

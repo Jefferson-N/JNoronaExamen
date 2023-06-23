@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JNoronaExamen.Resumen">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblUser"
+                       TextColor="Red"/>
+            <Label Text="Resumen"
+                 />            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nombre" FontSize="16" Grid.Row="0" Grid.Column="0"  />
+                <Entry x:Name="txtNombre" Placeholder="Nombre"  Grid.Row="0" Grid.Column="1" IsEnabled="false"/>
+                <Label Text="Apellido" FontSize="16" Grid.Row="1" Grid.Column="0" />
+                <Entry x:Name="txtApellido" Placeholder="Apellido" Grid.Row="1" Grid.Column="1" IsEnabled="false"/>
+                <Label Text="Edad" FontSize="16" Grid.Row="2" Grid.Column="0" />
+                <Entry x:Name="txtEdad" Placeholder="Edad" Keyboard="Numeric" Grid.Row="2" Grid.Column="1" IsEnabled="false"/>
+                <Label Text="fecha" FontSize="16" Grid.Row="3" Grid.Column="0" />
+                <Entry x:Name="txtFecha" Placeholder="Fecha" Grid.Row="3" Grid.Column="1" IsEnabled="false"/>
+                <Label Text="Ciudad" FontSize="16" Grid.Row="4" Grid.Column="0" />
+                <Entry x:Name="txtCiudad" Placeholder="Ciudad" Grid.Row="4" Grid.Column="1" IsEnabled="false"/>
+                <Label Text="fecha" FontSize="16" Grid.Row="5" Grid.Column="0" />
+                <Entry x:Name="txtPais" Placeholder="Pais" Grid.Row="5" Grid.Column="1" IsEnabled="false"/>
+                <Label Text="Monto Inicial" FontSize="16" Grid.Row="6" Grid.Column="0" />
+                <Entry x:Name="txtMonto" Placeholder="Monto" Grid.Row="6" Grid.Column="1" IsEnabled="false"/>
+                <Label Text="Pago Mensual" FontSize="16" Grid.Row="7" Grid.Column="0" />
+                <Entry x:Name="txtPagoM" Placeholder="Pago Mensual" Grid.Row="7" Grid.Column="1" IsEnabled="false"/>
+                <Label Text="Pago Total" FontSize="16" Grid.Row="8" Grid.Column="0" />
+                <Entry x:Name="txtPagoT" Placeholder="Pago Total" Grid.Row="8" Grid.Column="1" IsEnabled="false"/>
+            </Grid>
+            <Button x:Name="btnCerrar" Text="Cerrar sesiòn" Clicked="btnCerrar_Clicked" Grid.Row="0" Grid.Column="0" />
+            <Label></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
